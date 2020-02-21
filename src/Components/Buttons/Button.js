@@ -38,7 +38,7 @@ const Button = (props) => {
     }
 
     if (props.icon) {
-        return <div><img src={props.icon}></img></div>
+        return <button onClick={props.onClick} className={classList}><img src={props.icon}></img>{props.label}</button>
     }
     return<button onClick={props.onClick} className={classList}>{props.label}</button>
 }

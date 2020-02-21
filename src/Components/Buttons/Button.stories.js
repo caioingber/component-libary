@@ -184,8 +184,24 @@ storiesOf("Button", module)
 
     //Action Buttons
     .add('Cart With Text', () => <Button 
-        label=""
+        label=" Add to Cart"
         type="primary"
         fade
         icon={Cart}
+    />)
+    .add('Cart No Text', () => <Button 
+        type="primary"
+        fade
+        icon={Cart}
+    />)
+    .add('Heart With Text', () => <Button 
+        label=" Add to Favorites"
+        type="primary"
+        fade
+        icon={Heart}
+    />)
+    .add('Heart No Text', () => <Button 
+        type="primary"
+        fade
+        icon={Heart}
     />)
