@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Form.css'
+import Button from '../Buttons/Button'
 
 class Form extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class Form extends Component {
     render() {
         let classList = ''
 
+        //Looking for placeholder text
         let placeholder = this.props.placeholder
         if (!placeholder) {
             placeholder = this.props.label
@@ -17,18 +19,25 @@ class Form extends Component {
         //Assigning class by input type
         let types = ['text', 'select', 'number', 'voucher', 'checkbox']
         if (types.includes(this.props.type)) {
-            classList += ` input-${this.props.type}`
+            classList += ` form-${this.props.type}`
         }
+
+        if(this.props.medium) {classList += ` medium`}
         
+        //Conditional render for select forms
         if (this.props.select) {
             return (
-                <select></select>
+            <form className={classList}>
+                <select >
+                        <option>{this.props.label}</option>
+                </select>
+            </form>
             )
         }
         return (
-        <form onSubmit={this.props.onSubmit}>
+        <form onSubmit={this.props.onSubmit} className={classList}>
             <label className="input-label">{this.props.label}</label> <br></br>
-            <input type={this.props.type} placeholder={placeholder} className={classList}></input>
+            <input type={this.props.type} placeholder={placeholder} ></input>
         </form>
         )
     }
