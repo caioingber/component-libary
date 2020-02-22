@@ -19,6 +19,7 @@ storiesOf("Form", module)
     .add('Text Input Large', () => <Form 
         label="Email"
         type="text"
+        large
     />
     )
     .add('Select Input Small', () => <Form

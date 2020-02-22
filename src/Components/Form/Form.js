@@ -23,21 +23,22 @@ class Form extends Component {
         }
 
         if(this.props.medium) {classList += ` medium`}
+        if(this.props.large) {classList += ` large`}
         
         //Conditional render for select forms
         if (this.props.select) {
             return (
-            <form className={classList}>
-                <select >
+            <form>
+                <select className={classList}>
                         <option>{this.props.label}</option>
                 </select>
             </form>
             )
         }
         return (
-        <form onSubmit={this.props.onSubmit} className={classList}>
+        <form onSubmit={this.props.onSubmit}>
             <label className="input-label">{this.props.label}</label> <br></br>
-            <input type={this.props.type} placeholder={placeholder} ></input>
+            <input type={this.props.type} placeholder={placeholder} className={classList}></input>
         </form>
         )
     }
