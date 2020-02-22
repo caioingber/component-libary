@@ -73,7 +73,6 @@ storiesOf("Button", module)
     .add('Danger Faded', () => <Button 
         label="Do something"
         type="danger"
-
         fade
     />)
     .add('Success Faded', () => <Button 

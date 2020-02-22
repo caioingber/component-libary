@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './Form.css'
-// import Button from '../Buttons/Button'
 
 class Form extends Component {
     constructor(props) {
@@ -43,18 +42,22 @@ class Form extends Component {
         //Determining background color
         if(this.props.outline) {classList += ` outline`}
         if(this.props.filled) {classList += ` filled`}
+
+        //Size for input w/ button
+        if(this.props.buttonSmall) {classList += ` form-${this.props.type}-small`}
+        if(this.props.buttonLarge) {classList += ` form-${this.props.type}-large`}
         
-        //Conditional render for select forms
+        //render for select input
         if (this.props.select) {
             return (
             <form>
                 <select className={classList}>
-                        <option>{this.props.label}</option>
+                    <option>{this.props.label}</option>
                 </select>
             </form>
             )
         }
-
+        //Render number input
         if(this.props.count) {
             return (
                 <div className={classList}>
@@ -62,8 +65,19 @@ class Form extends Component {
                 </div>
             )
         }
+
+        if(this.props.voucher) {
+            return (
+                <div className={classList}>
+                    <input type={this.props.type} placeholder={placeholder}></input>
+                    <button className='button-primary white-text'>{this.props.label}</button>
+                </div>
+            )
+        }
+
+        //render text input
         return (
-        <form onSubmit={this.props.onSubmit}>
+        <form>
             <label className="input-label">{this.props.label}</label> <br></br>
             <input type={this.props.type} placeholder={placeholder} className={classList}></input>
         </form>

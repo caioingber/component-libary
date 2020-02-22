@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-
 import Form from './Form'
 
 storiesOf("Form", module)
+    //text inputs
     .add('Text Input Small', () => <Form 
         label="Email"
         type="text"
@@ -22,7 +22,8 @@ storiesOf("Form", module)
         large
     />
     )
-    .add('Select Input Small Outline Outline', () => <Form
+    //select inputs
+    .add('Select Input Small Outline', () => <Form
         label="Select"
         type="select"
         select
@@ -68,7 +69,23 @@ storiesOf("Form", module)
         filled
     />
     )
+    //number input
     .add('Counter Form', () => <Form 
         type='number'
         count
+    />)
+    //text inputs w/ button
+    .add('Text with Button Small', () => <Form 
+        type='voucher'
+        placeholder='Voucher code'
+        label='Redeem'
+        voucher
+        buttonSmall
+    />)
+    .add('Text with Button Large', () => <Form 
+        type='voucher'
+        placeholder='Voucher code'
+        label='Redeem'
+        voucher
+        buttonLarge
     />)

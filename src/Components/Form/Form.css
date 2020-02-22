@@ -58,7 +58,7 @@ form {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .form-number > button {
@@ -66,4 +66,40 @@ form {
     background-color: rgba(38, 38, 38, 0);
     border: none;
     color: #33A0FF;
+}
+
+.form-voucher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid #FAFAFB;
+    border-radius: 3px;
+}
+
+.form-voucher > input::placeholder {
+    color: rgba(38, 38, 38, .5);
+}
+
+.form-voucher > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+}
+
+.form-voucher > button {
+    padding: 0 20px;
+    width: 100px;
+    height: 100%;
+    border: none;
+}
+
+.form-voucher-small {
+    width: 200px;
+    height: 30px;
+}
+
+.form-voucher-large {
+    width: 250px;
+    height: 40px;
 }
