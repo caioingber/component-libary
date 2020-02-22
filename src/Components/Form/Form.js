@@ -11,6 +11,18 @@ class Form extends Component {
         }
     }
 
+    increaseCount = () => {
+        if(this.state.count < 10) {
+            this.setState({ count: this.state.count + 1})
+        }
+    }
+
+    decreaseCount = () => {
+        if(this.state.count > 0) {
+            this.setState({ count: this.state.count - 1})
+        }
+    }
+
     render() {
         let classList = ''
 
@@ -46,7 +58,7 @@ class Form extends Component {
         if(this.props.count) {
             return (
                 <div className={classList}>
-                    <button>-</button><span>{this.state.count}</span><button>+</button>
+                    <button onClick={this.decreaseCount}>-</button><span>{this.state.count}</span><button onClick={this.increaseCount}>+</button>
                 </div>
             )
         }
