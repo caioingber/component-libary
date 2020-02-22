@@ -8,6 +8,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    margin-right: 5px;
+}
+
 .button-default:hover {
     background-color: #13161A;
 }
@@ -75,32 +79,6 @@ button {
 /* Outline Classes */
 .button-outline {
     background-color: #FAFAFB !important;
-}
-
-/* Faded Classes */
-
-.button-primary {
-    background-color: #33A0FF;
-    color: #33A0FF;
-    border: 1px solid #33A0FF;
-}
-
-.button-danger {
-    background-color: #FF4252;
-    color: #FF4252;
-    border: 1px solid#FF4252;
-}
-
-.button-success {
-    background-color: #0AD00A;
-    color: #0AD00A;
-    border: 1px solid #0AD00A;
-}
-
-.button-warning{
-    background-color: #FFC600;
-    color: #FFC600;
-    border: 1px solid #FFC600;
 }
 
 

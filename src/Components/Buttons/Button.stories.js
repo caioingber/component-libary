@@ -86,6 +86,10 @@ storiesOf("Button", module)
         type="warning"
         fade
     />)
+    .add('Default Faded', () => <Button 
+        label="Do something"
+        fade
+    />)
 
     //Large Buttons
     .add('Primary Large', () => <Button 
