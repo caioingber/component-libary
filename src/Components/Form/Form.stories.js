@@ -22,22 +22,49 @@ storiesOf("Form", module)
         large
     />
     )
-    .add('Select Input Small', () => <Form
+    .add('Select Input Small Outline Outline', () => <Form
         label="Select"
-        type="select" 
+        type="select"
         select
+        outline
     />
     )
-    .add('Select Input Medium', () => <Form 
+    .add('Select Input Medium Outline', () => <Form 
         label="Select"
         type="select"
         select
         medium
+        outline
     />
     )
-    .add('Select Input Large', () => <Form 
+    .add('Select Input Large Outline', () => <Form 
         label="Select"
         type="select"
         select
+        large
+        outline
+    />
+    )
+    .add('Select Input Small Filled', () => <Form
+        label="Select"
+        type="select"
+        select
+        filled
+    />
+    )
+    .add('Select Input Medium Filled', () => <Form 
+        label="Select"
+        type="select"
+        select
+        medium
+        filled
+    />
+    )
+    .add('Select Input Large Filled', () => <Form 
+        label="Select"
+        type="select"
+        select
+        large
+        filled
     />
     )

@@ -13,7 +13,7 @@ form {
     width: 200px;
     padding: 5px 10px;
     margin-top: 5px;
-    border: 1.4px solid rgba(38, 38, 38, .16);
+    border: 1.5px solid #FAFAFB;
     border-radius: 3px;
 }
 
@@ -23,17 +23,18 @@ form {
 
 .medium {
     padding: 10px 10px;
+    width: 200px;
 }
 
 .large {
     padding: 15px 13px;
+    width: 200px;
 }
 
 select {
     display: block;
-    line-height: 1;
-    padding: 2%;
-    width: 150px;
+    padding: 5px 10px;
+    width: 130px;
     border: 1.5px solid #FAFAFB;
     border-radius: 3px;
     appearance: none;

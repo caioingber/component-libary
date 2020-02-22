@@ -18,12 +18,15 @@ class Form extends Component {
 
         //Assigning class by input type
         let types = ['text', 'select', 'number', 'voucher', 'checkbox']
-        if (types.includes(this.props.type)) {
-            classList += ` form-${this.props.type}`
-        }
+        if (types.includes(this.props.type)) {classList += ` form-${this.props.type}`}
 
+        //Assigning size class
         if(this.props.medium) {classList += ` medium`}
         if(this.props.large) {classList += ` large`}
+
+        //Determining background color
+        if(this.props.outline) {classList += ` outline`}
+        if(this.props.filled) {classList += ` filled`}
         
         //Conditional render for select forms
         if (this.props.select) {
