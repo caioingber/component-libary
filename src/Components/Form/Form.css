@@ -31,7 +31,7 @@ form {
     width: 200px;
 }
 
-select {
+.form-select {
     display: block;
     padding: 5px 10px;
     width: 130px;
@@ -49,4 +49,21 @@ select {
 
 .filled {
     background-color: #FAFAFB;
+}
+
+.form-number {
+    padding: 5px 0;
+    background-color: rgba(38, 38, 38, .05);
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+}
+
+.form-number > button {
+    padding: 0;
+    background-color: rgba(38, 38, 38, 0);
+    border: none;
+    color: #33A0FF;
 }

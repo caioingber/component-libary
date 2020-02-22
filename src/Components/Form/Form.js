@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import './Form.css'
-import Button from '../Buttons/Button'
+// import Button from '../Buttons/Button'
 
 class Form extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            count: 0
+        }
     }
 
     render() {
@@ -36,6 +40,14 @@ class Form extends Component {
                         <option>{this.props.label}</option>
                 </select>
             </form>
+            )
+        }
+
+        if(this.props.count) {
+            return (
+                <div className={classList}>
+                    <button>-</button><span>{this.state.count}</span><button>+</button>
+                </div>
             )
         }
         return (

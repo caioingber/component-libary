@@ -68,3 +68,7 @@ storiesOf("Form", module)
         filled
     />
     )
+    .add('Counter Form', () => <Form 
+        type='number'
+        count
+    />)
