@@ -38,7 +38,7 @@ form {
     border: 1.5px solid #FAFAFB;
     border-radius: 3px;
     appearance: none;
-    background-image: url('../Icons/arrow-down.svg');
+    /* background-image: url('../Icons/arrow-down.svg'); */
     background-repeat: no-repeat;
     background-position: right 10px top 50%;
 }

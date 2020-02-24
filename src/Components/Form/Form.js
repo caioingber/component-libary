@@ -76,7 +76,7 @@ class Form extends Component {
         if (this.props.select) {
             return (
             <form>
-                <select className={classList}>
+                <select className={classList} style={this.props.style}>
                     <option>{this.props.label}</option>
                 </select>
             </form>

@@ -3,6 +3,11 @@ import { storiesOf } from '@storybook/react';
 
 import Form from './Form'
 import Check from '../Icons/check.svg'
+import Arrow from '../Icons/arrow-down.svg'
+
+let arrowPic = {
+    backgroundImage: `url(${Arrow})`
+}
 
 storiesOf("Form", module)
     //text inputs
@@ -29,6 +34,7 @@ storiesOf("Form", module)
         type="select"
         select
         outline
+        style={arrowPic}
     />
     )
     .add('Select Input Medium Outline', () => <Form 
@@ -37,6 +43,7 @@ storiesOf("Form", module)
         select
         medium
         outline
+        style={arrowPic}
     />
     )
     .add('Select Input Large Outline', () => <Form 
@@ -45,6 +52,7 @@ storiesOf("Form", module)
         select
         large
         outline
+        style={arrowPic}
     />
     )
     .add('Select Input Small Filled', () => <Form
@@ -52,6 +60,7 @@ storiesOf("Form", module)
         type="select"
         select
         filled
+        style={arrowPic}
     />
     )
     .add('Select Input Medium Filled', () => <Form 
@@ -60,6 +69,7 @@ storiesOf("Form", module)
         select
         medium
         filled
+        style={arrowPic}
     />
     )
     .add('Select Input Large Filled', () => <Form 
@@ -68,6 +78,7 @@ storiesOf("Form", module)
         select
         large
         filled
+        style={arrowPic}
     />
     )
     //number input
