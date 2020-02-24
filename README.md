@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Component Libary
 
-## Available Scripts
+For this project, I created a React Component Library utilizing Storybook based off an Adobe XD Mock-up. [Click Here](https://vigilant-mayer-c30ebd.netlify.com/) for the deployed library.
 
-In the project directory, you can run:
+## Development
 
-### `npm start`
+From the mock-up, I initially attempted to identify patterns with the component stylings so as to determine default stylings and required props. Additional stylings were added as props for size, colors, etc.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Challenges
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Creating the button components was mostly straightforward as they all held similar properties. I utilized the same approach for the forms, which led to messier code, as there were fewer consistencies across the different components. In future iterations of this library, I would like to breakdown the forms into their own respective subcomponents and import them into the stories file for improved readability and to more easily track and modify them.
 
-### `npm test`
+I also found that styling the select and checkbox forms was quite difficult as these HTML elements have default styling and behavior which must be reset. The checkbox was particularly difficult. To work around this, I created a span element that was superimposed on the checkbox input so that it could be more easily styled when clicked:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+``` CSS
 
-### `npm run build`
+.form-checkbox input:checked ~ .checkmark {
+    background-color: #33A0FF;
+}
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `npm run eject`
+* React JS
+* CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

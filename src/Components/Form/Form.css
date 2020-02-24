@@ -134,6 +134,7 @@ form {
 .checkmark img {
     transform: scale(.7);
     margin: 0;
+    cursor: pointer;
 }
 
 
