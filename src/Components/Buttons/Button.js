@@ -3,6 +3,7 @@ import './Button.css'
 
 const Button = (props) => {
     let classList = ''
+    let imageList = ''
 
     let types = ['primary', 'danger', 'success', 'warning', 'default']
 
@@ -31,14 +32,23 @@ const Button = (props) => {
     //white backgorund
     if (props.outline) {
         classList += ` button-outline`
-    }
+    } 
     //large
     if(props.large) {
         classList += ` button-large`
     }
 
     if (props.icon) {
-        return <button onClick={props.onClick} className={classList}><img src={props.icon}></img>{props.label}</button>
+        if (props.label) {
+            classList += ` adjust-button`
+            imageList += ` right-margin`
+        } else {
+            classList += ` adjust-button`
+        }
+    }
+
+    if (props.icon) {
+        return <button onClick={props.onClick} className={classList}><img src={props.icon} className={imageList}></img><p className={imageList}>{props.label}</p></button>
     }
     return<button onClick={props.onClick} className={classList}>{props.label}</button>
 }

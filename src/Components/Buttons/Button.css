@@ -1,15 +1,13 @@
 /* Defaults */
 button {
-    border-radius: 1px;
+    display: flex;
+    /* align-items: center; */
+    border-radius: 2px;
     padding: 5px 25px;
     background-color: #22262A;
     color: #22262A;
     border: 1px solid #22262A;
     cursor: pointer;
-}
-
-img {
-    margin-right: 5px;
 }
 
 .button-default:hover {
@@ -104,4 +102,20 @@ img {
 
 .no-border {
     border: none;
+}
+
+.adjust-button {
+    padding: 10px !important;
+    font-size: 10px;
+}
+
+.right-margin {
+    margin-right: 5px;
+}
+
+img {
+    transform: scale(.7);
+}
+p {
+    margin: 0;
 }

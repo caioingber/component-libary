@@ -22,13 +22,13 @@ form {
 }
 
 .medium {
-    padding: 10px 10px;
-    width: 200px;
+    padding: 10px 10px !important;
+    width: 200px !important;
 }
 
 .large {
-    padding: 15px 13px;
-    width: 200px;
+    padding: 15px 13px !important;
+    width: 200px !important;
 }
 
 .form-select {
@@ -108,6 +108,8 @@ form {
     display: flex;
     align-items: center;
     font-size: 10px;
+    color: #22262A;
+    width: fit-content;
 }
 
 .form-checkbox input {
@@ -126,7 +128,7 @@ form {
     background-color: transparent;
     border: 1px solid #33A0FF;
     border-radius: 2px;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .checkmark img {
