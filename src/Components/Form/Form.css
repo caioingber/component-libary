@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
+    font-family: Helvetica, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 form {
-    font-family: Helvetica, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(38, 38, 38);
     font-size: 12px;
 }
@@ -88,7 +88,7 @@ form {
 }
 
 .form-voucher > button {
-    padding: 0 20px;
+    padding: 0 10%;
     width: 100px;
     height: 100%;
     border: none;
@@ -102,4 +102,56 @@ form {
 .form-voucher-large {
     width: 250px;
     height: 40px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+.form-checkbox input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    margin: 0;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    border: 1px solid #33A0FF;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.checkmark img {
+    transform: scale(.7);
+    margin: 0;
+}
+
+
+.black-check {
+    border: 1px solid #22262A !important;
+}
+
+.checkmark::after {
+    display: none;
+    content: "";
+}
+
+.form-checkbox input:checked ~ .checkmark {
+    background-color: #33A0FF;
+}
+
+.form-checkbox input:checked ~ .black-check {
+    background-color: #22262A !important;
+}
+
+.form-checkbox input:checked ~ .checkmark::after {
+    display: block;
 }

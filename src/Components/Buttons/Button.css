@@ -56,7 +56,7 @@ img {
     border: 1px solid #2E90E5;
 }
 
-.button-danger-hover:hover {
+.button-danger-hover:hover { 
     background-color: #F53848;
     border: 1px solid #F53848;
 }

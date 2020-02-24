@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Form from './Form'
+import Check from '../Icons/check.svg'
 
 storiesOf("Form", module)
     //text inputs
@@ -81,6 +82,7 @@ storiesOf("Form", module)
         label='Redeem'
         voucher
         buttonSmall
+        action
     />)
     .add('Text with Button Large', () => <Form 
         type='voucher'
@@ -88,4 +90,29 @@ storiesOf("Form", module)
         label='Redeem'
         voucher
         buttonLarge
+        action
+    />)
+    .add('Checkbox Blue', () => <Form 
+        type='checkbox'
+        check
+        pic={Check}
+    />)
+    .add('Checkbox Black', () => <Form 
+        type='checkbox'
+        check
+        black
+        pic={Check}
+    />)
+    .add('Checkbox Blue Text', () => <Form 
+        type='checkbox'
+        label="Don't show this popup again"
+        check
+        pic={Check}
+    />)
+    .add('Checkbox Black Text', () => <Form 
+        type='checkbox'
+        label="Don't show this popup again"
+        check
+        black
+        pic={Check}
     />)
